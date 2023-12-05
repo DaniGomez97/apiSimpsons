@@ -1,0 +1,89 @@
+.boton {
+  min-width: 50%;
+  max-width: 60%;
+  padding: 10px;
+  font-size: large;
+  border-radius: 20px;
+  border-color: rgb(236, 235, 235);
+  color: yellow;
+  text-shadow: 1px 1px 1px black;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(248, 246, 246);
+}
+
+.boton:hover {
+  border-color: rgb(138, 138, 138);
+  cursor: pointer;
+  background-color: rgb(201, 201, 201);
+}
+
+/* Estilos para mostrar/ocultar el contenido (.carta) */
+.carta {
+  width: 40%;
+  background-color: beige;
+  border-radius: 10px;
+  position: absolute;
+  top: calc(
+    10% + 50px
+  ); /* Ajusta la posición vertical para dejar espacio para el botón */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px; /* Espacio interno para el contenido */
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.titulo {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode";
+  font-weight: bold;
+  color: yellow;
+  text-align: center;
+  text-shadow: 2px 1px 3px black;
+  width: 100%;
+}
+
+.estado {
+  font-style: italic;
+  width: 90%;
+  text-align: center;
+  font-size: small;
+}
+
+.historia {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  width: 90%; /* Ocupa todo el ancho disponible */
+  padding: 10px;
+  text-align: center;
+}
+.contenedor-imagen {
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+
+.imagen {
+  width: 10vw;
+  height: auto;
+}
+
+@media (max-width: 550px) {
+  .carta {
+    width: 80%;
+  }
+  .imagen {
+    width: 30vw;
+    height: 30vh;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  .historia {
+    line-height: 1.5;
+  }
+}
